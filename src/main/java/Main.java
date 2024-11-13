@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        Game game = new Game();
-        game.start();
+        Game3DApp.launch(args); // Avvia l'applicazione JavaFX
     }
 }
