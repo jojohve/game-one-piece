@@ -2,3 +2,5 @@ com\example\PrimaryController.class
 com\example\SecondaryController.class
 module-info.class
 com\example\App.class
+com\example\BattleController.class
+com\example\Carta.class
