@@ -81,7 +81,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: relative;  /* Aggiungi questa per permettere il posizionamento assoluto del figlio */
+    position: relative;
+    /* Aggiungi questa per permettere il posizionamento assoluto del figlio */
 }
 
 .isola:hover {
@@ -91,9 +92,12 @@ body {
 }
 
 .isola-span {
-    position: absolute;  /* Posiziona lo span fuori dal flusso normale */
-    top: -20px;          /* Regola la distanza dall'alto della .isola */
-    left: -20px;         /* Regola la distanza da sinistra della .isola */
+    position: absolute;
+    /* Posiziona lo span fuori dal flusso normale */
+    top: -20px;
+    /* Regola la distanza dall'alto della .isola */
+    left: -20px;
+    /* Regola la distanza da sinistra della .isola */
     margin: 15px;
     padding: 4px 8px;
     background-color: white;
@@ -287,4 +291,10 @@ body {
 
 .isola.valid-drop:hover {
     background-color: rgba(0, 255, 0, .7)
+}
+
+@media (max-width: 600px) {
+    .giocatore1, .giocatore2 {
+        width: 1200px;
+    }
 }
