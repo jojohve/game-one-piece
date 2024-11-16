@@ -133,22 +133,24 @@ body {
 }
 
 #categoria {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
-    color: rgb(107, 61, 48);
+    color: white;
+    background-color: rgba(209, 209, 209, 0.767);
+    padding: 1px 2px;
     margin-bottom: 5px
 }
 
 .card>span {
     font-size: 16px;
     font-weight: bold;
-    color: rgb(107, 61, 48);
+    color: white;
     margin: 5px 0
 }
 
 #hp {
     font-size: 12px;
-    color: rgb(220, 50, 50);
+    color: white;
     margin: 5px 0
 }
 
@@ -159,7 +161,7 @@ body {
 
 #haki {
     font-size: 10px;
-    color: rgb(107, 61, 48);
+    color: white;
     margin: 5px 0
 }
 
@@ -182,7 +184,7 @@ body {
 
 .mosse {
     font-size: 10px;
-    color: rgb(107, 61, 48);
+    color: white;
     margin: 5px 0
 }
 
