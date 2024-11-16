@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <div id="status">
+            <h2>Turno del Giocatore <span id="current-player">1</span></h2>
+            <button id="start-game">Lancia Testa o Croce</button>
+            <p id="coin-result"></p>
+        </div>
+        <div id="legend">
+            <h3>Legenda Categorie</h3>
+            <ul>
+                <li>Normale → batte Zoo</li>
+                <li>Zoo → batte Rogia</li>
+                <li>Rogia → batte Paramisha</li>
+                <li>Paramisha → batte Normale</li>
+            </ul>
+        </div>
+        <div id="hand1" class="hand"></div>
+        <div id="territories" class="territories">
+            <div class="territory normal" data-territory="1" data-category="Normale" ondragover="allowDrop(event)" ondrop="dropCard(event)">
+                Territorio 1<br>(Favorisce Normale)
+            </div>
+            <div class="territory zoo" data-territory="2" data-category="Zoo" ondragover="allowDrop(event)" ondrop="dropCard(event)">
+                Territorio 2<br>(Favorisce Zoo)
+            </div>
+            <div class="territory rogia" data-territory="3" data-category="Rogia" ondragover="allowDrop(event)" ondrop="dropCard(event)">
+                Territorio 3<br>(Favorisce Rogia)
+            </div>
+            <div class="territory paramisha" data-territory="4" data-category="Paramisha" ondragover="allowDrop(event)" ondrop="dropCard(event)">
+                Territorio 4<br>(Favorisce Paramisha)
+            </div>
+            <div class="territory normal" data-territory="5" data-category="Normale" ondragover="allowDrop(event)" ondrop="dropCard(event)">
+                Territorio 5<br>(Favorisce Normale)
+            </div>
+        </div>
+        <div id="hand2" class="hand"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

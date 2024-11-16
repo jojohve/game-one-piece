@@ -1,47 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Piece Card Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ONE PIECE CARD GAME</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div id="game">
-        <div id="status">
-            <h2>Turno del Giocatore <span id="current-player">1</span></h2>
-            <button id="start-game">Lancia Testa o Croce</button>
-            <p id="coin-result"></p>
+    <div class="main-container">
+        <!-- Carte Giocatore 1 -->
+        <div class="giocatore1">
+            <div class="card" draggable="true" id="rufy">
+                <div id="categoria">Paramisha</div>
+                <span>Rufy</span>
+                <div id="hp">150<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>CONQUERER</button>
+                </div>
+                <div class="mosse">
+                    <span><button>GOMU-GOMU NO ROCKET</button> 30</span>
+                </div>
+                <div id="area">
+                    <span>Villaggio Fosha</span>
+                </div>
+            </div>
+
+            <div class="card" draggable="true" id="zoro">
+                <div id="categoria">Normale</div>
+                <span>Zoro</span>
+                <div id="hp">180<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>OBSERVATION</button>
+                </div>
+                <div class="mosse">
+                    <span><button>TECNICA A UNA SPADA</button> 20</span>
+                </div>
+                <div id="area">
+                    <span>none</span>
+                </div>
+            </div>
+
+            <div class="card" draggable="true" id="sanji">
+                <div id="categoria">Normale</div>
+                <span>Sanji</span>
+                <div id="hp">140<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>DIABLE JUMP</button> 40</span>
+                </div>
+                <div id="area">
+                    <span>Baratie</span>
+                </div>
+            </div>
+
+            <div class="card" draggable="true" id="robin">
+                <div id="categoria">Paramisha</div>
+                <span>Robin</span>
+                <div id="hp">120<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>OBSERVATION</button>
+                </div>
+                <div class="mosse">
+                    <span><button>GIGANTESCO MANO</button> 50</span>
+                </div>
+                <div id="area">
+                    <span>Ohara</span>
+                </div>
+            </div>
+
+            <div class="card" draggable="true" id="chopper">
+                <div id="categoria">Zoan</div>
+                <span>Chopper</span>
+                <div id="hp">80<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>RUMBLE CANDY</button> 30</span>
+                </div>
+                <div id="area">
+                    <span>Regno dei ciliegi</span>
+                </div>
+            </div>
+
+            <div class="card" draggable="true" id="jinbe">
+                <div id="categoria">Uomo-Pesce</div>
+                <span>Jinbe</span>
+                <div id="hp">160<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>TECNICA SEGRETA</button> 50</span>
+                </div>
+                <div id="area">
+                    <span>Isola degli Uomini-Pesce</span>
+                </div>
+            </div>
+
         </div>
-        <div id="legend">
-            <h3>Legenda Categorie</h3>
-            <ul>
-                <li>Normale → batte Zoo</li>
-                <li>Zoo → batte Rogia</li>
-                <li>Rogia → batte Paramisha</li>
-                <li>Paramisha → batte Normale</li>
-            </ul>
+
+        <!-- Mappa -->
+        <div class="mappa">
+            <!-- Nave Giocatore 1 -->
+            <div class="nave-giocatore1">
+                <span class="ship-name">Going Merry</span>
+            </div>
+
+            <div class="isole">
+                <div class="isola">
+                    <span class="isola-span">Dressrosa</span>
+                </div>
+                <div class="isola">
+                    <span class="isola-span">Alabasta</span>
+                </div>
+                <div class="isola">
+                    <span class="isola-span">Punk Hazard</span>
+                </div>
+                <div class="isola">
+                    <span class="isola-span">Arlong Park</span>
+                </div>
+                <div class="isola">
+                    <span class="isola-span">Baratie</span>
+                </div>
+            </div>
+
+            <!-- Nave Giocatore 2 -->
+            <div class="nave-giocatore2">
+                <span class="ship-name">Nave della Marina</span>
+            </div>
         </div>
-        <div id="hand1" class="hand"></div>
-        <div id="territories" class="territories">
-            <div class="territory normal" data-territory="1" data-category="Normale" ondragover="allowDrop(event)" ondrop="dropCard(event)">
-                Territorio 1<br>(Favorisce Normale)
+
+        <!-- Carte Giocatore 2 -->
+        <div class="giocatore2">
+            <div class="card" draggable="true" id="Crocodile">
+                <div id="categoria">Rogia</div>
+                <span>Crocodile</span>
+                <div id="hp">130<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>DESERTO SPADA</button> 30</span>
+                </div>
+                <div id="area">
+                    <span>Alabasta</span>
+                </div>
             </div>
-            <div class="territory zoo" data-territory="2" data-category="Zoo" ondragover="allowDrop(event)" ondrop="dropCard(event)">
-                Territorio 2<br>(Favorisce Zoo)
+
+            <div class="card" draggable="true" id="Smoker">
+                <div id="categoria">Rogia</div>
+                <span>Smoker</span>
+                <div id="hp">160<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>WHITE SMOKE</button> 30</span>
+                </div>
+                <div id="area">
+                    <span>Lougue Town</span>
+                </div>
             </div>
-            <div class="territory rogia" data-territory="3" data-category="Rogia" ondragover="allowDrop(event)" ondrop="dropCard(event)">
-                Territorio 3<br>(Favorisce Rogia)
+
+            <div class="card" draggable="true" id="Arlong">
+                <div id="categoria">Uomo-Pesce</div>
+                <span>Arlong</span>
+                <div id="hp">130<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>SPEZZACOLLO</button> 50</span>
+                </div>
+                <div id="area">
+                    <span>Arlong Park</span>
+                </div>
             </div>
-            <div class="territory paramisha" data-territory="4" data-category="Paramisha" ondragover="allowDrop(event)" ondrop="dropCard(event)">
-                Territorio 4<br>(Favorisce Paramisha)
+
+            <div class="card" draggable="true" id="Mihawk">
+                <div id="categoria">Normale</div>
+                <span>Mihawk</span>
+                <div id="hp">170<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>OBSERVATION</button>
+                </div>
+                <div class="mosse">
+                    <span><button>COLTELLO</button> 10</span>
+                </div>
+                <div id="area">
+                    <span>Baratie</span>
+                </div>
             </div>
-            <div class="territory normal" data-territory="5" data-category="Normale" ondragover="allowDrop(event)" ondrop="dropCard(event)">
-                Territorio 5<br>(Favorisce Normale)
+
+            <div class="card" draggable="true" id="Bugy">
+                <div id="categoria">Paramisha</div>
+                <span>Bugy</span>
+                <div id="hp">120<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>CONQUERER</button>
+                </div>
+                <div class="mosse">
+                    <span><button>BUGY BALL</button> 40</span>
+                </div>
+                <div id="area">
+                    <span>none</span>
+                </div>
             </div>
+
+            <div class="card" draggable="true" id="Alvida">
+                <div id="categoria">Paramisha</div>
+                <span>Alvida</span>
+                <div id="hp">100<span> HP</span></div>
+                <div id="haki">
+                    <span>Haki:</span>
+                    <button>ARMOR</button>
+                </div>
+                <div class="mosse">
+                    <span><button>ALVIDA BALL</button> 20</span>
+                </div>
+                <div id="area">
+                    <span>none</span>
+                </div>
+            </div>
+
         </div>
-        <div id="hand2" class="hand"></div>
     </div>
-    <script src="script.js"></script>
+
+    <script src="js/Card.js"></script>
+    <script src="js/Main.js"></script>
 </body>
+
 </html>
