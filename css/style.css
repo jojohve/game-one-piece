@@ -22,8 +22,9 @@ body {
   display: grid;
   justify-content: center;
   margin: 20px;
+  padding: 20px;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .mappa {
@@ -67,6 +68,7 @@ body {
   margin: 0;
   color: white;
   width: 100%;
+  padding: 20px;
 }
 
 .isola {
@@ -87,7 +89,7 @@ body {
 
 .isola:hover {
   background-color: rgb(128, 128, 128);
-  filter: brightness(1.1);
+  filter: brightness(1.05);
   cursor: pointer;
 }
 
@@ -141,13 +143,58 @@ body {
 }
 
 .card.disabled {
-  pointer-events: none; /* Blocca l'interazione con la carta */
-  opacity: 0.5; /* Riduce la visibilità */
+  opacity: 0.5;
+  pointer-events: none;
+  /* Impedisce l'interazione con la carta disabilitata */
+}
+
+button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+  /* Impedisce l'interazione con il bottone disabilitato */
 }
 
 /* Pulsanti di default disabilitati */
 button:disabled {
   pointer-events: none;
+}
+
+/* Stile base per i bottoni */
+button {
+  display: inline-block;
+  padding: 10px 20px; /* Spaziatura interna */
+  margin: 10px; /* Spaziatura esterna */
+  font-size: 18px; /* Dimensione del testo */
+  font-weight: bold; /* Testo in grassetto */
+  color: #fff; /* Colore del testo */
+  background: linear-gradient(to right, #4CAF50, #45a049); /* Gradiente verde */
+  border: none; /* Nessun bordo */
+  border-radius: 8px; /* Angoli arrotondati */
+  box-shadow: 0 4px #2e7d32; /* Ombra per un effetto 3D */
+  cursor: pointer; /* Cambia il puntatore a mano */
+  transition: all 0.3s ease; /* Animazione per hover e clic */
+}
+
+/* Stile al passaggio del mouse */
+button:hover {
+  background: linear-gradient(to right, #45a049, #388e3c); /* Cambia leggermente il colore */
+  box-shadow: 0 6px #1b5e20; /* Cambia l'ombra */
+}
+
+/* Stile al clic */
+button:active {
+  transform: translateY(2px); /* Sposta leggermente verso il basso */
+  box-shadow: 0 2px #1b5e20; /* Ombra più ridotta */
+}
+
+/* Stile specifico per il bottone "Termina Turno" */
+.termina-turno {
+  background: linear-gradient(to right, #FF5722, #E64A19); /* Gradiente rosso/arancio */
+}
+
+/* Stile specifico per il bottone "Inizia Lancio" */
+.inizia-lancio {
+  background: linear-gradient(to right, #2196F3, #1976D2); /* Gradiente blu */
 }
 
 .card:hover {
@@ -330,8 +377,25 @@ button:disabled {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
+  animation: turnAnimation 1s ease-in-out;
 }
 
+.oggetto-style {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: cover;
+}
+
+@keyframes turnAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @media (max-width: 600px) {
   .giocatore1,
   .giocatore2 {

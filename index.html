@@ -12,7 +12,7 @@
     <div class="main-container">
         <!-- Carte Giocatore 1 -->
         <div class="giocatore1">
-            <div class="card" draggable="true" id="rufy" onclick="selectCard('rufy')">
+            <div class="card carta-giocatore1" draggable="true" id="rufy" onclick="selectCard('rufy')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">150<span> HP</span></div>
                 <div id="haki">
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="zoro" onclick="selectCard('zoro')">
+            <div class="card carta-giocatore1" draggable="true" id="zoro" onclick="selectCard('zoro')">
                 <div id="categoria">Normale</div>
                 <div id="hp">180<span> HP</span></div>
                 <div id="haki">
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="sanji" onclick="selectCard('sanji')">
+            <div class="card carta-giocatore1" draggable="true" id="sanji" onclick="selectCard('sanji')">
                 <div id="categoria">Normale</div>
                 <div id="hp">140<span> HP</span></div>
                 <div id="haki">
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="robin" onclick="selectCard('robin')">
+            <div class="card carta-giocatore1" draggable="true" id="robin" onclick="selectCard('robin')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">120<span> HP</span></div>
                 <div id="haki">
@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="chopper" onclick="selectCard('chopper')">
+            <div class="card carta-giocatore1" draggable="true" id="chopper" onclick="selectCard('chopper')">
                 <div id="categoria">Zoan</div>
                 <div id="hp">80<span> HP</span></div>
                 <div id="haki">
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="jinbe" onclick="selectCard('jinbe')">
+            <div class="card carta-giocatore1" draggable="true" id="jinbe" onclick="selectCard('jinbe')">
                 <div id="categoria">Uomo-Pesce</div>
                 <div id="hp">160<span> HP</span></div>
                 <div id="haki">
@@ -111,33 +111,30 @@
         </div>
 
         <!-- Mappa -->
-        <div class="mappa">
+        <div class="mappa" id="mappa">
             <button id="inizia-lancio">INIZIA PARTITA!</button>
 
             <div class="turn-info">
                 Turno: <span id="turno">Giocatore 1</span>
             </div>
-            <button id="termina-turno-giocatore1">Termina Turno</button>
+            <button id="termina-turno-giocatore1" class="termina-turno" disabled>Termina Turno</button>
 
             <!-- Nave Giocatore 1 -->
-            <div class="nave-giocatore1">
+            <div class="nave-giocatore1" id="going-merry">
                 <span class="ship-name">Going Merry</span>
             </div>
 
             <div class="isole">
-                <div class="isola">
+                <div class="isola" id="dressrosa">
                     <span class="isola-span">Dressrosa</span>
                 </div>
-                <div class="isola">
+                <div class="isola" id="alabasta">
                     <span class="isola-span">Alabasta</span>
                 </div>
-                <div class="isola">
-                    <span class="isola-span">Punk Hazard</span>
-                </div>
-                <div class="isola">
+                <div class="isola" id="arlong-park">
                     <span class="isola-span">Arlong Park</span>
                 </div>
-                <div class="isola">
+                <div class="isola" id="baratie">
                     <span class="isola-span">Baratie</span>
                 </div>
             </div>
@@ -145,17 +142,17 @@
             <div class="turn-info">
                 Turno: <span id="turno2">Giocatore 1</span>
             </div>
-            <button id="termina-turno-giocatore2">Termina Turno</button>
-            
+            <button id="termina-turno-giocatore2" class="termina-turno" disabled>Termina Turno</button>
+
             <!-- Nave Giocatore 2 -->
-            <div class="nave-giocatore2">
+            <div class="nave-giocatore2" id="marine">
                 <span class="ship-name">Nave della Marina</span>
             </div>
         </div>
 
         <!-- Carte Giocatore 2 -->
         <div class="giocatore2">
-            <div class="card" draggable="true" id="crocodile" onclick="selectCard('crocodile')">
+            <div class="card carta-giocatore2" draggable="true" id="crocodile" onclick="selectCard('crocodile')">
                 <div id="categoria">Rogia</div>
                 <div id="hp">130<span> HP</span></div>
                 <div id="haki">
@@ -171,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="smoker" onclick="selectCard('smoker')">
+            <div class="card carta-giocatore2" draggable="true" id="smoker" onclick="selectCard('smoker')">
                 <div id="categoria">Rogia</div>
                 <div id="hp">160<span> HP</span></div>
                 <div id="haki">
@@ -187,7 +184,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="arlong" onclick="selectCard('arlong')">
+            <div class="card carta-giocatore2" draggable="true" id="arlong" onclick="selectCard('arlong')">
                 <div id="categoria">Uomo-Pesce</div>
                 <div id="hp">130<span> HP</span></div>
                 <div id="haki">
@@ -203,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="mihawk" onclick="selectCard('mihawk')">
+            <div class="card carta-giocatore2" draggable="true" id="mihawk" onclick="selectCard('mihawk')">
                 <div id="categoria">Normale</div>
                 <div id="hp">170<span> HP</span></div>
                 <div id="haki">
@@ -219,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="bugy" onclick="selectCard('bugy')">
+            <div class="card carta-giocatore2" draggable="true" id="bugy" onclick="selectCard('bugy')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">120<span> HP</span></div>
                 <div id="haki">
@@ -235,7 +232,7 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="alvida" onclick="selectCard('alvida')">
+            <div class="card carta-giocatore2" draggable="true" id="alvida" onclick="selectCard('alvida')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">100<span> HP</span></div>
                 <div id="haki">
@@ -278,6 +275,30 @@
             setCardBackground('bugy', 'images/Bugy.png');
             setCardBackground('mihawk', 'images/Mihawk.png');
             setCardBackground('alvida', 'images/Alvida.png');
+            setCardBackground('dressrosa', 'images/dressrosa.png');
+            setCardBackground('alabasta', 'images/alabasta.jpg');
+            setCardBackground('baratie', 'images/baratie.png');
+            setCardBackground('arlong-park', 'images/arlong-park.png');
+            setCardBackground('mappa', 'images/mappa.jpg');
+            setCardBackground('marine', 'images/marine.jpg');
+            setCardBackground('going-merry', 'images/going-merry.png');
+
+            const isolaElement = document.getElementById('isola');
+            if (isolaElement) {
+                isolaElement.classList.add('oggetto-style');
+            }
+
+            const mappaElement = document.getElementById('mappa');
+            if (mappaElement) {
+                mappaElement.classList.add('oggetto-style');
+            }
+
+            const nave1Element = document.getElementById('going-merry');
+            const nave2Element = document.getElementById('marine');
+            if (nave1Element && nave2Element) {
+                nave1Element.classList.add('oggetto-style');
+                nave2Element.classList.add('oggetto-style');
+            }
         };
 
         let selectedCard = null; // Aggiungi questa dichiarazione all'inizio dello script
@@ -301,22 +322,22 @@
         }
 
         function deselectCard() {
-    if (selectedCard) {
-        selectedCard.classList.remove('selected'); // Rimuove lo stile di selezione
-        const buttons = selectedCard.querySelectorAll('button');
-        buttons.forEach(button => (button.disabled = true)); // Disabilita i pulsanti
-        selectedCard = null; // Resetta la carta selezionata
-    }
+            if (selectedCard) {
+                selectedCard.classList.remove('selected'); // Rimuove lo stile di selezione
+                const buttons = selectedCard.querySelectorAll('button');
+                buttons.forEach(button => (button.disabled = true)); // Disabilita i pulsanti
+                selectedCard = null; // Resetta la carta selezionata
+            }
 
-    // Rimuove l'event listener per clic fuori dalla carta
-    document.removeEventListener('click', handleOutsideClick);
-}
+            // Rimuove l'event listener per clic fuori dalla carta
+            document.removeEventListener('click', handleOutsideClick);
+        }
 
-function handleOutsideClick(event) {
-    if (!selectedCard.contains(event.target)) {
-        deselectCard();
-    }
-}
+        function handleOutsideClick(event) {
+            if (!selectedCard.contains(event.target)) {
+                deselectCard();
+            }
+        }
 
         // Seleziona tutte le carte
         const cards = document.querySelectorAll('.card');
