@@ -12,15 +12,15 @@
     <div class="main-container">
         <!-- Carte Giocatore 1 -->
         <div class="giocatore1">
-            <div class="card" draggable="true" id="rufy">
+            <div class="card" draggable="true" id="rufy" onclick="selectCard('rufy')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">150<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>CONQUERER</button>
+                    <button disabled>CONQUERER</button>
                 </div>
                 <div class="mosse">
-                    <span><button>GOMU-GOMU NO ROCKET</button> 30</span>
+                    <span><button disabled>GOMU-GOMU NO ROCKET</button> 30</span>
                 </div>
                 <span>Rufy</span>
                 <div id="area">
@@ -28,15 +28,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="zoro">
+            <div class="card" draggable="true" id="zoro" onclick="selectCard('zoro')">
                 <div id="categoria">Normale</div>
                 <div id="hp">180<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>OBSERVATION</button>
+                    <button disabled>OBSERVATION</button>
                 </div>
                 <div class="mosse">
-                    <span><button>TECNICA A UNA SPADA</button> 20</span>
+                    <span><button disabled>TECNICA A UNA SPADA</button> 20</span>
                 </div>
                 <span>Zoro</span>
                 <div id="area">
@@ -44,15 +44,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="sanji">
+            <div class="card" draggable="true" id="sanji" onclick="selectCard('sanji')">
                 <div id="categoria">Normale</div>
                 <div id="hp">140<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>DIABLE JUMP</button> 40</span>
+                    <span><button disabled>DIABLE JUMP</button> 40</span>
                 </div>
                 <span>Sanji</span>
                 <div id="area">
@@ -60,15 +60,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="robin">
+            <div class="card" draggable="true" id="robin" onclick="selectCard('robin')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">120<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>OBSERVATION</button>
+                    <button disabled>OBSERVATION</button>
                 </div>
                 <div class="mosse">
-                    <span><button>GIGANTESCO MANO</button> 50</span>
+                    <span><button disabled>GIGANTESCO MANO</button> 50</span>
                 </div>
                 <span>Robin</span>
                 <div id="area">
@@ -76,15 +76,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="chopper">
+            <div class="card" draggable="true" id="chopper" onclick="selectCard('chopper')">
                 <div id="categoria">Zoan</div>
                 <div id="hp">80<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>RUMBLE CANDY</button> 30</span>
+                    <span><button disabled>RUMBLE CANDY</button> 30</span>
                 </div>
                 <span>Chopper</span>
                 <div id="area">
@@ -92,15 +92,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="jinbe">
+            <div class="card" draggable="true" id="jinbe" onclick="selectCard('jinbe')">
                 <div id="categoria">Uomo-Pesce</div>
                 <div id="hp">160<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>TECNICA SEGRETA</button> 50</span>
+                    <span><button disabled>TECNICA SEGRETA</button> 50</span>
                 </div>
                 <span>Jinbe</span>
                 <div id="area">
@@ -112,6 +112,13 @@
 
         <!-- Mappa -->
         <div class="mappa">
+            <button id="inizia-lancio">INIZIA PARTITA!</button>
+
+            <div class="turn-info">
+                Turno: <span id="turno">Giocatore 1</span>
+            </div>
+            <button id="termina-turno-giocatore1">Termina Turno</button>
+
             <!-- Nave Giocatore 1 -->
             <div class="nave-giocatore1">
                 <span class="ship-name">Going Merry</span>
@@ -135,6 +142,11 @@
                 </div>
             </div>
 
+            <div class="turn-info">
+                Turno: <span id="turno2">Giocatore 1</span>
+            </div>
+            <button id="termina-turno-giocatore2">Termina Turno</button>
+            
             <!-- Nave Giocatore 2 -->
             <div class="nave-giocatore2">
                 <span class="ship-name">Nave della Marina</span>
@@ -143,15 +155,15 @@
 
         <!-- Carte Giocatore 2 -->
         <div class="giocatore2">
-            <div class="card" draggable="true" id="Crocodile">
+            <div class="card" draggable="true" id="crocodile" onclick="selectCard('crocodile')">
                 <div id="categoria">Rogia</div>
                 <div id="hp">130<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>DESERTO SPADA</button> 30</span>
+                    <span><button disabled>DESERTO SPADA</button> 30</span>
                 </div>
                 <span>Crocodile</span>
                 <div id="area">
@@ -159,15 +171,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="Smoker">
+            <div class="card" draggable="true" id="smoker" onclick="selectCard('smoker')">
                 <div id="categoria">Rogia</div>
                 <div id="hp">160<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>WHITE SMOKE</button> 30</span>
+                    <span><button disabled>WHITE SMOKE</button> 30</span>
                 </div>
                 <span>Smoker</span>
                 <div id="area">
@@ -175,15 +187,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="Arlong">
+            <div class="card" draggable="true" id="arlong" onclick="selectCard('arlong')">
                 <div id="categoria">Uomo-Pesce</div>
                 <div id="hp">130<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>SPEZZACOLLO</button> 50</span>
+                    <span><button disabled>SPEZZACOLLO</button> 50</span>
                 </div>
                 <span>Arlong</span>
                 <div id="area">
@@ -191,15 +203,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="Mihawk">
+            <div class="card" draggable="true" id="mihawk" onclick="selectCard('mihawk')">
                 <div id="categoria">Normale</div>
                 <div id="hp">170<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>OBSERVATION</button>
+                    <button disabled>OBSERVATION</button>
                 </div>
                 <div class="mosse">
-                    <span><button>COLTELLO</button> 10</span>
+                    <span><button disabled>COLTELLO</button> 10</span>
                 </div>
                 <span>Mihawk</span>
                 <div id="area">
@@ -207,15 +219,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="Bugy">
+            <div class="card" draggable="true" id="bugy" onclick="selectCard('bugy')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">120<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>CONQUERER</button>
+                    <button disabled>CONQUERER</button>
                 </div>
                 <div class="mosse">
-                    <span><button>BUGY BALL</button> 40</span>
+                    <span><button disabled>BUGY BALL</button> 40</span>
                 </div>
                 <span>Bugy</span>
                 <div id="area">
@@ -223,15 +235,15 @@
                 </div>
             </div>
 
-            <div class="card" draggable="true" id="Alvida">
+            <div class="card" draggable="true" id="alvida" onclick="selectCard('alvida')">
                 <div id="categoria">Paramisha</div>
                 <div id="hp">100<span> HP</span></div>
                 <div id="haki">
                     <span>Haki:</span>
-                    <button>ARMOR</button>
+                    <button disabled>ARMOR</button>
                 </div>
                 <div class="mosse">
-                    <span><button>ALVIDA BALL</button> 20</span>
+                    <span><button disabled>ALVIDA BALL</button> 20</span>
                 </div>
                 <span>Alvida</span>
                 <div id="area">
@@ -267,10 +279,96 @@
             setCardBackground('mihawk', 'images/Mihawk.png');
             setCardBackground('alvida', 'images/Alvida.png');
         };
+
+        let selectedCard = null; // Aggiungi questa dichiarazione all'inizio dello script
+
+        function selectCard(cardId) {
+            // Se c'è già una carta selezionata, deselezioniamola
+            if (selectedCard) {
+                deselectCard();
+            }
+
+            // Seleziona la nuova carta
+            selectedCard = document.getElementById(cardId);
+            if (selectedCard) {
+                selectedCard.classList.add('selected'); // Aggiunge lo stile di selezione
+                const buttons = selectedCard.querySelectorAll('button');
+                buttons.forEach(button => (button.disabled = false)); // Abilita i pulsanti
+            }
+
+            // Aggiunge un event listener per rilevare clic fuori dalla carta
+            document.addEventListener('click', handleOutsideClick);
+        }
+
+        function deselectCard() {
+    if (selectedCard) {
+        selectedCard.classList.remove('selected'); // Rimuove lo stile di selezione
+        const buttons = selectedCard.querySelectorAll('button');
+        buttons.forEach(button => (button.disabled = true)); // Disabilita i pulsanti
+        selectedCard = null; // Resetta la carta selezionata
+    }
+
+    // Rimuove l'event listener per clic fuori dalla carta
+    document.removeEventListener('click', handleOutsideClick);
+}
+
+function handleOutsideClick(event) {
+    if (!selectedCard.contains(event.target)) {
+        deselectCard();
+    }
+}
+
+        // Seleziona tutte le carte
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            // Aggiungi un evento di clic alla carta
+            card.addEventListener('click', function (e) {
+                // Se la carta non è già selezionata
+                if (!card.classList.contains('selected')) {
+                    // Rimuovi la classe selected da tutte le carte
+                    cards.forEach(c => {
+                        c.classList.remove('selected');
+                        // Disattiva i bottoni
+                        const buttons = c.querySelectorAll('button');
+                        buttons.forEach(button => button.disabled = true);
+                    });
+                    // Aggiungi la classe selected alla carta cliccata
+                    card.classList.add('selected');
+                    // Attiva i bottoni
+                    const buttons = card.querySelectorAll('button');
+                    buttons.forEach(button => button.disabled = false);
+                }
+                e.stopPropagation(); // Impedisce che il clic si propaghi al documento
+            });
+
+            // Seleziona tutti i bottoni all'interno della carta
+            const buttons = card.querySelectorAll('button');
+            buttons.forEach(button => {
+                // Aggiungi un evento di clic al bottone
+                button.addEventListener('click', function (e) {
+                    // Rimuovi la classe selected dalla carta
+                    card.classList.remove('selected');
+                    // Disattiva i bottoni
+                    buttons.forEach(btn => btn.disabled = true);
+                    e.stopPropagation(); // Impedisce che il clic si propaghi al documento
+                });
+            });
+        });
+
+        // Rimuovi la selezione cliccando fuori dalla carta
+        document.addEventListener('click', () => {
+            cards.forEach(card => {
+                card.classList.remove('selected');
+                // Disattiva i bottoni
+                const buttons = card.querySelectorAll('button');
+                buttons.forEach(button => button.disabled = true);
+            });
+        });
     </script>
 
     <script src="js/Card.js"></script>
-    <script src="js/Main.js"></script>
+    <script src="js/Turn.js"></script>
 </body>
 
 </html>

@@ -111,6 +111,7 @@ body {
 }
 
 .card {
+    position: relative;
     width: 120px;
     height: 170px;
     background-color: rgb(235, 235, 235);
@@ -127,9 +128,39 @@ body {
     transition: transform .2s ease, box-shadow .2s ease
 }
 
+.card.selected {
+    position: fixed;
+    /* Centra la carta sullo schermo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Scala e centra la carta */
+    z-index: 100;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+.card.disabled {
+    pointer-events: none;  /* Blocca l'interazione con la carta */
+    opacity: 0.5;          /* Riduce la visibilità */
+}
+
+/* Pulsanti di default disabilitati */
+button:disabled {
+    pointer-events: none;
+}
+
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .3)
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Disabilita l'effetto hover per la carta selezionata */
+.card.selected:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Scala e centra la carta */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 #categoria {
@@ -295,8 +326,16 @@ body {
     background-color: rgba(0, 255, 0, .7)
 }
 
+.turn-info {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 600px) {
-    .giocatore1, .giocatore2 {
+
+    .giocatore1,
+    .giocatore2 {
         width: 1200px;
     }
 }
