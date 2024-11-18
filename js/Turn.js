@@ -5,6 +5,7 @@ let contatoreMovimenti = {}; // Oggetto per tenere traccia dei movimenti per ogn
 let movimentoEffettuato = false; // Flag per verificare se è stato fatto un movimento
 let movimentiGiocatore = 0; // Contatore per i movimenti del giocatore
 const maxMovimentiPerTurno = 1;  // Limita il numero di movimenti per turno
+const maxMossePerTurno = 1;  // Limita il numero di mosse per turno
 
 // Funzione per disabilitare tutte le carte
 function disabilitaTutteLeCarte() {
