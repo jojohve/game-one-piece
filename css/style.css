@@ -113,21 +113,45 @@ body {
 }
 
 .card {
-  position: relative;
-  width: 120px;
-  height: 170px;
-  background-color: rgb(235, 235, 235);
-  border: 2px solid rgb(107, 61, 48);
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  padding: 8px;
+  width: 160px;
+  height: 220px;
+  background: linear-gradient(to bottom, #282c34, #1f1f1f);
+  color: #fff;
+  border: 1px solid #b8b8b8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Arial", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.card .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 5px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: rgba(209, 209, 209, 0.527);
+}
+
+.card .main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 50px;
+  padding: 0px;
+}
+
+.card .main button {
+  width: 140px;
+  padding: 1px;
 }
 
 .card.selected {
@@ -160,7 +184,7 @@ button:disabled {
 }
 
 /* Stile base per i bottoni */
-button {
+.mappa-button {
   display: inline-block;
   padding: 10px 20px; /* Spaziatura interna */
   margin: 10px; /* Spaziatura esterna */
@@ -176,13 +200,13 @@ button {
 }
 
 /* Stile al passaggio del mouse */
-button:hover {
+.mappa-button:hover {
   background: linear-gradient(to right, #45a049, #388e3c); /* Cambia leggermente il colore */
   box-shadow: 0 6px #1b5e20; /* Cambia l'ombra */
 }
 
 /* Stile al clic */
-button:active {
+.mappa-button:active {
   transform: translateY(2px); /* Sposta leggermente verso il basso */
   box-shadow: 0 2px #1b5e20; /* Ombra più ridotta */
 }
@@ -211,72 +235,107 @@ button:active {
 }
 
 #categoria {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: white;
-  background-color: rgba(209, 209, 209, 0.767);
-  padding: 1px 2px;
+  padding: 0px 5px;
   margin-bottom: 5px;
+  border-radius: 5px;
 }
 
 .card > span {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
   margin: 5px 0;
 }
 
 #hp {
-  font-size: 12px;
+  font-size: 16px;
   color: white;
   margin: 5px 0;
+  text-shadow: #474747 3px 5px 2px;
 }
 
 #hp span {
-  font-size: 10px;
+  font-size: 12px;
   color: rgb(150, 150, 150);
+  text-shadow: #474747 1px 1px 1px;
 }
 
-#haki {
-  font-size: 10px;
-  color: white;
-  margin: 5px 0;
+.card #haki {
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }
 
-#haki span {
+.card #haki span {
+  font-size: 14px;
   font-weight: bold;
 }
 
-#haki button {
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 4px;
-  padding: 2px 4px;
-  font-size: 10px;
-  cursor: pointer;
-}
-
-#haki button:hover {
-  background-color: rgb(220, 220, 220);
-}
-
-.mosse {
-  font-size: 10px;
+.card #haki button {
+  background: linear-gradient(to right, #FF5722, #E64A19);
   color: white;
-  margin: 5px 0;
+  border: none;
+  padding: 1px 1px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.2s ease;
 }
 
-.mosse button {
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 4px;
-  padding: 2px 4px;
-  font-size: 10px;
-  cursor: pointer;
-}
-
-.mosse button:hover {
+.card #haki button:hover {
   background-color: rgb(220, 220, 220);
+}
+
+.card .mosse span {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card .mosse button {
+  background: linear-gradient(to right, #2196F3, #1976D2);
+  color: white;
+  border: none;
+  width: 130px;
+  padding: 4px 0px;
+  font-size: 1px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.card .mosse button:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.card .footer {
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+  font-size: 14px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .footer .pg-name {
+  text-shadow: #474747 3px 5px 2px;
+  font-size: 22px;
+}
+
+.card .footer span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+.card .footer #area {
+  font-size: 12px;
+  color: #aaa;
 }
 
 #area {
@@ -295,16 +354,6 @@ button:active {
   font-weight: bold;
   font-size: 10px;
   color: rgb(107, 61, 48);
-}
-
-#haki button {
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 4px;
-  padding: 2px 4px;
-  font-size: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 #haki button:hover {

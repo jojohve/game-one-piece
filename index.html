@@ -13,98 +13,156 @@
         <!-- Carte Giocatore 1 -->
         <div class="giocatore1">
             <div class="card carta-giocatore1" draggable="true" id="rufy" onclick="selectCard('rufy')">
-                <div id="categoria">Paramisha</div>
-                <div id="hp">150<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>CONQUERER</button>
+                <div class="header">
+                    <div id="categoria">Paramisha</div>
+                    <div id="hp">150<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>GOMU-GOMU NO ROCKET</button> 30</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>CONQUERER</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('rufy', 'GOMU-GOMU NO ROCKET')" class="useMove">GOMU-GOMU NO
+                                ROCKET</button>
+                            <div class="danno"> 30</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Rufy</span>
-                <div id="area">
-                    <span>Villaggio Fosha</span>
+                <div class="footer">
+                    <span class="pg-name">Rufy</span>
+                    <div id="area">
+                        <span>Villaggio Fosha</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore1" draggable="true" id="zoro" onclick="selectCard('zoro')">
-                <div id="categoria">Normale</div>
-                <div id="hp">180<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>OBSERVATION</button>
+                <div class="header">
+                    <div id="categoria">Normale</div>
+                    <div id="hp">180<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>TECNICA A UNA SPADA</button> 20</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>OBSERVATION</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('zoro', 'TECNICA A UNA SPADA')" class="useMove">TECNICA A UNA
+                                SPADA</button>
+                            <div class="danno"> 20</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Zoro</span>
-                <div id="area">
-                    <span>none</span>
+                <div class="footer">
+                    <span class="pg-name">Zoro</span>
+                    <div id="area">
+                        <span>Marineford</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore1" draggable="true" id="sanji" onclick="selectCard('sanji')">
-                <div id="categoria">Normale</div>
-                <div id="hp">140<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Normale</div>
+                    <div id="hp">140<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>DIABLE JUMP</button> 40</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('sanji', 'DIABLE JUMP')" class="useMove">DIABLE JUMP</button>
+                            <div class="danno"> 40</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Sanji</span>
-                <div id="area">
-                    <span>Baratie</span>
+                <div class="footer">
+                    <span class="pg-name">Sanji</span>
+                    <div id="area">
+                        <span>Baratie</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore1" draggable="true" id="robin" onclick="selectCard('robin')">
-                <div id="categoria">Paramisha</div>
-                <div id="hp">120<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>OBSERVATION</button>
+                <div class="header">
+                    <div id="categoria">Paramisha</div>
+                    <div id="hp">120<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>GIGANTESCO MANO</button> 50</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>OBSERVATION</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('robin', 'GIGANTESCO MANO')" class="useMove">GIGANTESCO
+                                MANO</button>
+                            <div class="danno"> 50</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Robin</span>
-                <div id="area">
-                    <span>Ohara</span>
+                <div class="footer">
+                    <span class="pg-name">Robin</span>
+                    <div id="area">
+                        <span>Ohara</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore1" draggable="true" id="chopper" onclick="selectCard('chopper')">
-                <div id="categoria">Zoan</div>
-                <div id="hp">80<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Zoan</div>
+                    <div id="hp">80<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>RUMBLE CANDY</button> 30</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('chopper', 'RUMBLE CANDY')" class="useMove">RUMBLE CANDY</button>
+                            <div class="danno"> 30</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Chopper</span>
-                <div id="area">
-                    <span>Regno dei ciliegi</span>
+                <div class="footer">
+                    <span class="pg-name">Chopper</span>
+                    <div id="area">
+                        <span>Regno dei ciliegi</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore1" draggable="true" id="jinbe" onclick="selectCard('jinbe')">
-                <div id="categoria">Uomo-Pesce</div>
-                <div id="hp">160<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Uomo-Pesce</div>
+                    <div id="hp">160<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>TECNICA SEGRETA</button> 50</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('jinbe', 'TECNICA SEGRETA')" class="useMove">TECNICA
+                                SEGRETA</button>
+                            <div class="danno"> 40</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Jinbe</span>
-                <div id="area">
-                    <span>Isola degli Uomini-Pesce</span>
+                <div class="footer">
+                    <span class="pg-name">Jinbe</span>
+                    <div id="area">
+                        <span>Isola degli Uomini-Pesce</span>
+                    </div>
                 </div>
             </div>
 
@@ -112,12 +170,12 @@
 
         <!-- Mappa -->
         <div class="mappa" id="mappa">
-            <button id="inizia-lancio">INIZIA PARTITA!</button>
+            <button id="inizia-lancio" class="mappa-button">INIZIA PARTITA!</button>
 
             <div class="turn-info">
                 Turno: <span id="turno">Giocatore 1</span>
             </div>
-            <button id="termina-turno-giocatore1" class="termina-turno" disabled>Termina Turno</button>
+            <button id="termina-turno-giocatore1" class="termina-turno mappa-button" disabled>Termina Turno</button>
 
             <!-- Nave Giocatore 1 -->
             <div class="nave-giocatore1" id="going-merry">
@@ -142,7 +200,7 @@
             <div class="turn-info">
                 Turno: <span id="turno2">Giocatore 1</span>
             </div>
-            <button id="termina-turno-giocatore2" class="termina-turno" disabled>Termina Turno</button>
+            <button id="termina-turno-giocatore2" class="termina-turno mappa-button" disabled>Termina Turno</button>
 
             <!-- Nave Giocatore 2 -->
             <div class="nave-giocatore2" id="marine">
@@ -153,101 +211,155 @@
         <!-- Carte Giocatore 2 -->
         <div class="giocatore2">
             <div class="card carta-giocatore2" draggable="true" id="crocodile" onclick="selectCard('crocodile')">
-                <div id="categoria">Rogia</div>
-                <div id="hp">130<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Rogia</div>
+                    <div id="hp">130<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>DESERTO SPADA</button> 30</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('crocodile', 'DESERTO SPADA')" class="useMove">DESERTO
+                                SPADA</button>
+                            <div class="danno"> 30</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Crocodile</span>
-                <div id="area">
-                    <span>Alabasta</span>
+                <div class="footer">
+                    <span class="pg-name">Crocodile</span>
+                    <div id="area">
+                        <span>Alabasta</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore2" draggable="true" id="smoker" onclick="selectCard('smoker')">
-                <div id="categoria">Rogia</div>
-                <div id="hp">160<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Rogia</div>
+                    <div id="hp">160<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>WHITE SMOKE</button> 30</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('smoker', 'WHITE SMOKE')" class="useMove">WHITE SMOKE</button>
+                            <div class="danno"> 30</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Smoker</span>
-                <div id="area">
-                    <span>Lougue Town</span>
+                <div class="footer">
+                    <span class="pg-name">Smoker</span>
+                    <div id="area">
+                        <span>Lougue Town</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore2" draggable="true" id="arlong" onclick="selectCard('arlong')">
-                <div id="categoria">Uomo-Pesce</div>
-                <div id="hp">130<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Uomo-Pesce</div>
+                    <div id="hp">130<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>SPEZZACOLLO</button> 50</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('arlong', 'SPEZZACOLLO')" class="useMove">SPEZZACOLLO</button>
+                            <div class="danno"> 50</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Arlong</span>
-                <div id="area">
-                    <span>Arlong Park</span>
+                <div class="footer">
+                    <span class="pg-name">Arlong</span>
+                    <div id="area">
+                        <span>Arlong Park</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore2" draggable="true" id="mihawk" onclick="selectCard('mihawk')">
-                <div id="categoria">Normale</div>
-                <div id="hp">170<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>OBSERVATION</button>
+                <div class="header">
+                    <div id="categoria">Normale</div>
+                    <div id="hp">170<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>COLTELLO</button> 10</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>OBSERVATION</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('mihawk', 'COLTELLO')" class="useMove">COLTELLO</button>
+                            <div class="danno"> 10</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Mihawk</span>
-                <div id="area">
-                    <span>Baratie</span>
+                <div class="footer">
+                    <span class="pg-name">Mihawk</span>
+                    <div id="area">
+                        <span>Baratie</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore2" draggable="true" id="bugy" onclick="selectCard('bugy')">
-                <div id="categoria">Paramisha</div>
-                <div id="hp">120<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>CONQUERER</button>
+                <div class="header">
+                    <div id="categoria">Paramisha</div>
+                    <div id="hp">120<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>BUGY BALL</button> 40</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>CONQUERER</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('bugy', 'BUGY BALL')" class="useMove">BUGY BALL</button>
+                            <div class="danno"> 40</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Bugy</span>
-                <div id="area">
-                    <span>none</span>
+                <div class="footer">
+                    <span class="pg-name">Bugy</span>
+                    <div id="area">
+                        <span>Logue Town</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card carta-giocatore2" draggable="true" id="alvida" onclick="selectCard('alvida')">
-                <div id="categoria">Paramisha</div>
-                <div id="hp">100<span> HP</span></div>
-                <div id="haki">
-                    <span>Haki:</span>
-                    <button disabled>ARMOR</button>
+                <div class="header">
+                    <div id="categoria">Paramisha</div>
+                    <div id="hp">100<span> HP</span></div>
                 </div>
-                <div class="mosse">
-                    <span><button disabled>ALVIDA BALL</button> 20</span>
+                <div class="main">
+                    <div id="haki">
+                        <span>Haki:</span>
+                        <button disabled>ARMOR</button>
+                    </div>
+                    <div class="mosse">
+                        <span>
+                            <button onclick="useMove('alvida', 'ALVIDA BALL')" class="useMove">ALVIDA BALL</button>
+                            <div class="danno"> 20</div>
+                        </span>
+                    </div>
                 </div>
-                <span>Alvida</span>
-                <div id="area">
-                    <span>none</span>
+                <div class="footer">
+                    <span class="pg-name">Alvida</span>
+                    <div id="area">
+                        <span>Baratie</span>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -389,6 +501,7 @@
     </script>
 
     <script src="js/Card.js"></script>
+    <script src="js/Battle.js"></script>
     <script src="js/Turn.js"></script>
 </body>
 
