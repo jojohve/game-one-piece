@@ -1,5 +1,3 @@
-let attaccoEffettuato = false; // Flag per evitare colpi doppi
-
 // Aggiungi un gestore di eventi a tutti i pulsanti con la classe 'useMove'
 document.querySelectorAll('.useMove').forEach(button => {
     button.addEventListener('click', function () {
@@ -45,27 +43,20 @@ function useMove(cardId, moveName) {
     // Ora, otteniamo l'ID dell'isola associato alla carta attaccante
     const isolaElement = card.closest('.isola');
     if (!isolaElement) {
-        console.error(`Impossibile trovare l'isola per la carta ${cardId}`);
+        console.log(`Impossibile trovare l'isola per la carta ${cardId}`);
         return;
     }
     const isolaId = isolaElement.id;  // Otteniamo l'ID dell'isola in cui si trova la carta
 
     // Troviamo tutte le carte nel DOM
     const tutteLeCarte = document.querySelectorAll('.card');
-    
-    // Se l'attacco è già stato effettuato, fermiamo l'esecuzione
-    if (attaccoEffettuato) {
-        console.log("L'attacco è già stato effettuato questo turno.");
-        return; // Esci dalla funzione per evitare il colpo doppio
-    }
-
     let attackPerformed = false; // Variabile per verificare se l'attacco è stato eseguito
 
     tutteLeCarte.forEach(carta => {
         // Ottieni l'ID dell'isola della carta nemica
         const isolaNemicaElement = carta.closest('.isola');
         if (!isolaNemicaElement) {
-            console.error(`Impossibile trovare l'isola per la carta nemica ${carta.id}`);
+            console.log(`Impossibile trovare l'isola per la carta nemica ${carta.id}`);
             return;
         }
         const isolaNemicaId = isolaNemicaElement.id;
@@ -90,14 +81,12 @@ function useMove(cardId, moveName) {
             }
 
             attackPerformed = true;  // Segna che l'attacco è stato eseguito
-            return; // Interrompe il ciclo dopo il primo attacco eseguito
         }
     });
 
     // Passa i dati della carta e il danno alla funzione di attacco se l'attacco è stato eseguito
     if (attackPerformed) {
         attacco(cardId, moveDamage);
-        attaccoEffettuato = true; // Imposta il flag per evitare ulteriori attacchi nel turno
     } else {
         console.log("Nessun avversario trovato sulla stessa isola per l'attacco.");
     }
@@ -107,19 +96,18 @@ function useMove(cardId, moveName) {
 function isCartaAlleata(cartaId) {
     const giocatore = cartaId.split('-')[1];  // Estrai il numero del giocatore dalla carta (es. "giocatore1" => "1")
 
-    // Supponiamo che "giocatore1" e "giocatore2" siano alleati
-    // Cambia questa logica se desideri più giocatori alleati
-    const giocatoreAttivo = "giocatore1";  // Ad esempio, il giocatore attivo è "giocatore1"
+    // Cambia questa logica in base alla gestione delle alleanze tra i giocatori
+    const alleanze = {
+        "giocatore1": ["giocatore1", "giocatore2"],  // Esempio di alleanza tra giocatore1 e giocatore2
+        "giocatore2": ["giocatore1", "giocatore2"]
+    };
 
-    return giocatore === giocatoreAttivo;  // Se la carta è dello stesso giocatore, è alleata
+    // Verifica se il giocatore della carta è alleato con il giocatore attivo
+    const giocatoreAttivo = "giocatore1";  // Ad esempio, il giocatore attivo è "giocatore1"
+    return alleanze[giocatoreAttivo]?.includes(giocatore);
 }
 
 // Funzione per eseguire l'attacco (può essere personalizzata)
 function attacco(cardId, danno) {
     console.log(`Attacco in corso... ${cardId} con danno ${danno}`);
-}
-
-// Funzione per resettare lo stato dell'attacco al cambio turno
-function cambiaTurno() {
-    attaccoEffettuato = false; // Resetta il flag per il prossimo turno
 }
